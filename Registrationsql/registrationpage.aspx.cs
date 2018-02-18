@@ -23,7 +23,7 @@ namespace Registrationsql
             con.Open();
             if (con.State == System.Data.ConnectionState.Open)
             {
-                string regquery = "INSERT INTO regtable1(Id,Name,UserName) VALUES ('9','"+TxtName.Text+ "','"+TxtUserName.Text+"')";
+                string regquery = "INSERT INTO regtable1(Name,UserName,Password,Gender,Age,Address) VALUES ('"+TxtName.Text+ "','"+TxtUserName.Text+ "','" + TxtRePassword.Text + "','" + DropDownList1.SelectedItem+ "','" + TxtAge.Text + "','" + TxtAddress.Text + "')";
                 var CON = $"INSERT INTO regtable1(Name,UserName,Password,Gender,Age,Address) VALUES ('{TxtName.Text}','{TxtUserName.Text}')";
                 SqlCommand regcmd = new SqlCommand(regquery, con);
                 regcmd.ExecuteNonQuery();
