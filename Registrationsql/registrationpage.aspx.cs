@@ -28,6 +28,7 @@ namespace Registrationsql
                 SqlCommand regcmd = new SqlCommand(regquery, con);
                 regcmd.ExecuteNonQuery();
                 reportreg.InnerText = "Data Inserted Successfully";
+                //hrlo
             }
         }
     }
